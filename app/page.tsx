@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useMemo, useState } from "react";
+import React, { Suspense, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
@@ -84,24 +84,34 @@ const sectionContent = {
   about: {
     title: "O mnie",
     paragraphs: [
-      "Rozwijam się w kierunku frontendu i nowoczesnych rozwiązań webowych. Nie mam jeszcze dużego doświadczenia komercyjnego w IT, ale mam za sobą bootcamp Fullstack Developer, prywatne projekty oraz doświadczenie administratora strony internetowej.",
-      "Lubię uczyć się przez praktykę — budować, testować i poprawiać gotowe rozwiązania. W wolnym czasie nadrabiam braki technologiczne, rozwijam własne projekty i wykorzystuję AI do tworzenia grafik, modeli 3D, skryptów i prototypów interfejsów.",
-      "Szukam miejsca, w którym będę mógł szybko rosnąć jako frontend developer i przekładać techniczne zainteresowania na realne, użyteczne produkty.",
+      "Jestem osobą rozwijającą się w kierunku IT, ze szczególnym zainteresowaniem tworzeniem aplikacji webowych, interfejsów użytkownika oraz praktycznym wykorzystaniem narzędzi AI w pracy projektowej.",
+      "Ukończyłem bootcamp Fullstack Developer, a zdobyte umiejętności rozwijam poprzez własne projekty. Tworzę i testuję rozwiązania łączące web, AI, modele 3D, automatyzację oraz eksperymenty z interfejsem.",
+      "Posiadam również praktyczne doświadczenie w administracji strony internetowej, którą rozwijałem przez około 2 lata. Odpowiadałem za jej działanie, aktualizacje, rozwiązywanie problemów technicznych oraz utrzymanie serwisu dostępnego dla użytkowników.",
+      "Szybko się uczę, dobrze odnajduję się w pracy zadaniowej i potrafię samodzielnie doprowadzić projekt od pomysłu do działającego rozwiązania. W wolnym czasie regularnie nadrabiam braki i rozwijam własne umiejętności.",
     ],
     highlight:
-      "Bootcamp Fullstack Developer + prywatne projekty + doświadczenie techniczne + nastawienie na szybki rozwój.",
+      "Bootcamp Fullstack Developer + prywatne projekty + doświadczenie administracyjne + AI, ComfyUI i modele 3D.",
   },
 
   skills: {
     title: "Umiejętności",
     groups: [
       {
-        label: "Techniczne",
+        label: "Web i projekty",
         items: [
-          "Podstawy React, JavaScript i nowoczesnego frontendu",
-          "Bardzo dobra znajomość obsługi komputera",
-          "Tworzenie prostych projektów webowych i prototypów UI",
-          "Wykorzystanie AI do grafiki, modeli 3D, skryptów i automatyzacji",
+          "Podstawy HTML, CSS, JavaScript i React",
+          "Tworzenie i rozwijanie prostych aplikacji oraz interfejsów webowych",
+          "Administracja i utrzymanie strony internetowej",
+          "Bardzo dobra znajomość obsługi komputera i środowiska pracy projektowej",
+        ],
+      },
+      {
+        label: "AI i narzędzia",
+        items: [
+          "ChatGPT – wsparcie w nauce, debugowaniu, prototypowaniu i rozwijaniu kodu",
+          "ComfyUI – generowanie grafik, eksperymenty z modelami 3D i workflow AI",
+          "Tworzenie assetów wizualnych i testowanie pipeline od pomysłu do efektu końcowego",
+          "Praktyczne wykorzystanie AI jako narzędzia wspierającego pracę projektową",
         ],
       },
       {
@@ -109,8 +119,8 @@ const sectionContent = {
         items: [
           "Szybkie uczenie się i samodzielne nadrabianie braków",
           "Umiejętność pracy pod presją czasu",
-          "Komunikacja i przekazywanie informacji w jasny sposób",
           "Dobra organizacja pracy i odpowiedzialność za zadania",
+          "Komunikacja i przekazywanie informacji w jasny sposób",
         ],
       },
       {
@@ -125,10 +135,23 @@ const sectionContent = {
   },
 
   projects: {
-    title: "Projekty",
-    paragraphs: [
-      "Kliknij kafelek Projekty, aby wejść do dodatkowego poziomu interfejsu i zobaczyć wybrane obszary moich prac.",
-      "W projektach łączę web, AI, modele 3D, automatyzację i eksperymenty z interfejsem użytkownika.",
+    title: "Projekty i doświadczenie praktyczne",
+    items: [
+      {
+        name: "dblektor.eu – administracja strony internetowej",
+        description:
+          "Administracja i rozwój serwisu internetowego przez około 2 lata. Zarządzanie treścią, utrzymanie działania strony, rozwiązywanie problemów technicznych oraz dbanie o dostępność serwisu. Strona zyskiwała popularność i była polecana na forach oraz grupach Facebook. Projekt zakończony z powodu kosztów utrzymania serwera.",
+      },
+      {
+        name: "Interaktywne CV – aplikacja webowa",
+        description:
+          "Stworzenie futurystycznego CV w formie aplikacji webowej inspirowanej interfejsem Iron Man. Projekt łączy animowany UI, logikę aplikacji, modele 3D oraz prezentację portfolio w niestandardowej formie.",
+      },
+      {
+        name: "Modele 3D i AI workflow (ComfyUI)",
+        description:
+          "Tworzenie modeli 3D na podstawie obrazów przy użyciu narzędzi AI, eksperymenty z workflow ComfyUI oraz integracja modeli w aplikacji webowej. Projekt pokazuje praktyczne łączenie webu, AI i assetów 3D.",
+      },
     ],
   },
 
@@ -192,40 +215,40 @@ const sectionContent = {
       },
     ],
     extra: [
-      "Nauka własna i rozwój projektowy w obszarze frontendu, AI oraz narzędzi webowych",
+      "Nauka własna i rozwój projektowy w obszarze webu, AI, modeli 3D i narzędzi internetowych",
     ],
   },
 
   contact: {
     title: "Profil / Kontakt",
     name: "Dariusz Kuczkowski",
-    role: "Frontend / Fullstack / AI-assisted",
+    role: "Web / AI / Projekty techniczne",
     location: "Wrocław",
     email: "tomachawk88@gmail.com",
     phone: "+48 731 913 497",
     availability: "Od zaraz",
     workMode: "Dowolny",
     summary:
-      "Kandydat z technicznym zapleczem, praktycznym podejściem do rozwiązywania problemów i dużą motywacją do wejścia do branży IT przez frontend oraz projekty własne.",
+      "Łączę techniczne podejście, praktyczne doświadczenie zawodowe oraz własne projekty webowe i AI. Szukam miejsca, w którym będę mógł rozwijać się projektowo i zdobywać doświadczenie komercyjne w IT.",
   },
 
   ai: {
     title: "AI Workflow",
     items: [
-      "Wykorzystuję AI do szybszego prototypowania interfejsów i pomysłów produktowych",
-      "Tworzę grafiki, modele 3D i eksperymentalne assety wspierające projekty webowe",
-      "Używam AI jako wsparcia w nauce, debugowaniu i iteracyjnym rozwijaniu rozwiązań",
-      "Traktuję AI jako narzędzie przyspieszające pracę, a nie zamiennik zrozumienia logiki",
+      "Wykorzystuję AI do wspierania pracy projektowej — od pomysłu, przez prototyp, po iteracyjne ulepszanie rozwiązania",
+      "Tworzę grafiki, modele 3D i eksperymentalne assety przy użyciu ComfyUI oraz innych narzędzi AI",
+      "Używam AI jako wsparcia w nauce, debugowaniu kodu, generowaniu pomysłów i przyspieszaniu pracy",
+      "Traktuję AI jako narzędzie wspomagające, a nie zamiennik zrozumienia logiki i działania projektu",
     ],
   },
 
   goals: {
     title: "Cele",
     items: [
-      "Rozwijać się w nowoczesnym frontendzie i budować coraz lepsze interfejsy",
+      "Rozwijać się w obszarze webu, aplikacji, AI i projektów cyfrowych",
       "Wejść do środowiska, w którym liczy się praktyka, nauka i realny progres",
-      "Łączyć web development z AI, automatyzacją i kreatywnymi projektami technologicznymi",
-      "Budować portfolio projektów, które pokazują nie tylko estetykę, ale też działanie i pomysł",
+      "Łączyć tworzenie stron, interfejsów, automatyzacji i assetów AI w spójne projekty",
+      "Budować portfolio, które pokazuje nie tylko wygląd, ale też działanie, proces i pomysł",
     ],
   },
 
@@ -233,29 +256,29 @@ const sectionContent = {
     title: "Modele 3D",
     paragraphs: [
       "Po lewej stronie pojawia się duży podgląd modeli 3D. Możesz przełączać kolejne modele przyciskami Prev / Next.",
-      "Modele są częścią moich eksperymentów z AI, assetami i prezentacją projektów w przeglądarce.",
+      "Modele są częścią moich eksperymentów z AI, assetami, ComfyUI i prezentacją projektów w przeglądarce.",
     ],
   },
 
   websites: {
     title: "Strony WWW",
     paragraphs: [
-      "Tutaj mogę prezentować landing page, dashboardy, interfejsy i inne projekty frontendowe.",
-      "Interesuje mnie tworzenie stron, które nie tylko wyglądają dobrze, ale też mają charakter i wyróżniają się sposobem prezentacji.",
+      "Tutaj mogę prezentować landing page, dashboardy, interfejsy i inne projekty webowe.",
+      "Interesuje mnie tworzenie stron, które nie tylko wyglądają dobrze, ale też mają charakter, logikę działania i wyróżniają się sposobem prezentacji.",
     ],
   },
 
   automation: {
     title: "AI / Automatyzacje",
     paragraphs: [
-      "Miejsce na automatyzacje, pipeline’y AI, narzędzia wspierające pracę i eksperymenty z przyspieszaniem procesów.",
+      "Miejsce na automatyzacje, workflow AI, narzędzia wspierające pracę i eksperymenty z przyspieszaniem procesów.",
     ],
   },
 
   ui: {
     title: "UI / Koncepty",
     paragraphs: [
-      "Tutaj mogę pokazać futurystyczne interfejsy, koncepty produktów i wizualne eksperymenty z frontendem.",
+      "Tutaj mogę pokazać futurystyczne interfejsy, koncepty produktów i wizualne eksperymenty z webem oraz prezentacją projektów.",
     ],
   },
 } as const;
@@ -575,6 +598,26 @@ function SectionRenderer({ active }: { active: SectionKey }) {
       );
     }
 
+    if (firstItem?.name) {
+      return (
+        <>
+          <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+            Moduł aktywny
+          </div>
+          <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+
+          <div className="mt-5 space-y-5">
+            {current.items.map((project: any, index: number) => (
+              <div key={index} className="border-b border-cyan-300/10 pb-4 last:border-b-0">
+                <div className="text-base font-semibold text-cyan-100">{project.name}</div>
+                <p className="mt-2 text-sm leading-6 text-slate-300">{project.description}</p>
+              </div>
+            ))}
+          </div>
+        </>
+      );
+    }
+
     if (typeof firstItem === "string") {
       return (
         <>
@@ -804,7 +847,7 @@ export default function IronManCvLanding() {
 
                 <div className="absolute left-[720px] top-12 flex gap-4">
                   <StatChip label="Tryb" value="Active" />
-                  <StatChip label="Stack" value="React / JS / AI" />
+                  <StatChip label="Stack" value="Web / AI / 3D" />
                 </div>
 
                 <div className="absolute right-12 top-12 max-h-[730px] w-[420px] overflow-y-auto rounded-3xl border border-cyan-400/20 bg-slate-950/60 p-5 shadow-[0_0_40px_rgba(34,211,238,0.14)] backdrop-blur-xl">
