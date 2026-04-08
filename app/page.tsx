@@ -58,7 +58,7 @@ const modelLibrary = [
     id: "Robo_Roblox",
     name: "Robo Roblox",
     file: "/models/ComfyUI_00015_.glb",
-    description: "Popiersie w bardziej realistycznym stylu, z większą ilością detali.",
+    description: "Model koncepcyjny w stylistyce stylizowanej / game-ready.",
     scale: 1.1,
     position: [0, -0.35, 0] as [number, number, number],
   },
@@ -66,7 +66,7 @@ const modelLibrary = [
     id: "zombie",
     name: "Zombie",
     file: "/models/ComfyUI_00009_.glb",
-    description: "Popiersie w bardziej realistycznym stylu, z większą ilością detali.",
+    description: "Eksperyment z generowaniem postaci 3D na bazie obrazu.",
     scale: 1.1,
     position: [0, -0.35, 0] as [number, number, number],
   },
@@ -74,7 +74,7 @@ const modelLibrary = [
     id: "future_robot",
     name: "Future Robot",
     file: "/models/ComfyUI_00006_.glb",
-    description: "Popiersie w bardziej realistycznym stylu, z większą ilością detali.",
+    description: "Futurystyczny koncept 3D przygotowany do prezentacji w przeglądarce.",
     scale: 1.1,
     position: [0, -0.35, 0] as [number, number, number],
   },
@@ -83,51 +83,180 @@ const modelLibrary = [
 const sectionContent = {
   about: {
     title: "O mnie",
-    text: "Frontend / Fullstack z technicznym zapleczem, nastawiony na szybkie wdrażanie rozwiązań, automatyzację i pracę z AI.",
+    paragraphs: [
+      "Rozwijam się w kierunku frontendu i nowoczesnych rozwiązań webowych. Nie mam jeszcze dużego doświadczenia komercyjnego w IT, ale mam za sobą bootcamp Fullstack Developer, prywatne projekty oraz doświadczenie administratora strony internetowej.",
+      "Lubię uczyć się przez praktykę — budować, testować i poprawiać gotowe rozwiązania. W wolnym czasie nadrabiam braki technologiczne, rozwijam własne projekty i wykorzystuję AI do tworzenia grafik, modeli 3D, skryptów i prototypów interfejsów.",
+      "Szukam miejsca, w którym będę mógł szybko rosnąć jako frontend developer i przekładać techniczne zainteresowania na realne, użyteczne produkty.",
+    ],
+    highlight:
+      "Bootcamp Fullstack Developer + prywatne projekty + doświadczenie techniczne + nastawienie na szybki rozwój.",
   },
+
   skills: {
     title: "Umiejętności",
-    text: "React, JavaScript, TypeScript, UI, logika aplikacji, szybkie prototypowanie i debugowanie z użyciem AI.",
+    groups: [
+      {
+        label: "Techniczne",
+        items: [
+          "Podstawy React, JavaScript i nowoczesnego frontendu",
+          "Bardzo dobra znajomość obsługi komputera",
+          "Tworzenie prostych projektów webowych i prototypów UI",
+          "Wykorzystanie AI do grafiki, modeli 3D, skryptów i automatyzacji",
+        ],
+      },
+      {
+        label: "Praktyczne",
+        items: [
+          "Szybkie uczenie się i samodzielne nadrabianie braków",
+          "Umiejętność pracy pod presją czasu",
+          "Komunikacja i przekazywanie informacji w jasny sposób",
+          "Dobra organizacja pracy i odpowiedzialność za zadania",
+        ],
+      },
+      {
+        label: "Dodatkowe",
+        items: [
+          "Znajomość zasad BHP",
+          "Umiejętność obsługi różnych maszyn i urządzeń",
+          "Angielski na poziomie A2",
+        ],
+      },
+    ],
   },
+
   projects: {
     title: "Projekty",
-    text: "Kliknij kafelek Projekty, aby wejść do dodatkowego poziomu interfejsu i zobaczyć podział projektów.",
+    paragraphs: [
+      "Kliknij kafelek Projekty, aby wejść do dodatkowego poziomu interfejsu i zobaczyć wybrane obszary moich prac.",
+      "W projektach łączę web, AI, modele 3D, automatyzację i eksperymenty z interfejsem użytkownika.",
+    ],
   },
+
   experience: {
-    title: "Doświadczenie",
-    text: "Doświadczenie projektowe, administracja stroną internetową, praca przy własnych rozwiązaniach technicznych i iteracyjne rozwijanie produktów.",
+    title: "Doświadczenie zawodowe",
+    items: [
+      {
+        company: "MMT IDEA sp. z o.o. sp. k.",
+        role: "Elektromonter / Brygadzista",
+        period: "01.2023 – 10.2024",
+        location: "Wrocław",
+        points: [
+          "Brygadzista pogotowia sieciowego",
+          "Usuwanie usterek oraz awarii tramwajowej sieci trakcyjnej",
+          "Przeglądy i konserwacja tramwajowej sieci trakcyjnej",
+          "Obsługa oraz utrzymanie zajezdni na terenie miasta",
+        ],
+      },
+      {
+        company: "Ergopak",
+        role: "Operator maszyn CMD",
+        period: "11.2024 – 12.2024",
+        location: "Krępice",
+        points: [
+          "Obsługa zgrzewarek typu CMD",
+          "Praca przy procesie produkcyjnym z naciskiem na dokładność i powtarzalność",
+        ],
+      },
+      {
+        company: "MMT IDEA sp. z o.o. sp. k.",
+        role: "Elektromonter / Brygadzista",
+        period: "12.2024 – 02.2026",
+        location: "Wrocław",
+        points: [
+          "Brygadzista w pogotowiu stacyjnym",
+          "Obsługa tramwajowych stacji prostownikowych",
+          "Diagnostyka i usuwanie usterek infrastruktury",
+          "Praca pod presją czasu przy zachowaniu jakości i odpowiedzialności",
+          "Koordynacja zadań oraz przekazywanie kluczowych informacji w zespole",
+        ],
+      },
+    ],
+    summary:
+      "Doświadczenie techniczne nauczyło mnie odpowiedzialności, pracy pod presją czasu, szybkiego reagowania i działania w oparciu o konkretne procedury.",
   },
+
   education: {
     title: "Edukacja",
-    text: "Bootcamp fullstack, samodzielna nauka, praktyka projektowa oraz szybkie nadrabianie braków pod konkretne cele biznesowe.",
+    items: [
+      {
+        school: "CodeBrainers",
+        degree: "Fullstack Developer",
+        period: "2020",
+        location: "Certyfikat",
+      },
+      {
+        school: "ZSB",
+        degree: "Technolog Robót Wykończeniowych w Budownictwie / Technolog Budowlany",
+        period: "2004 – 2007",
+        location: "Wykształcenie",
+      },
+    ],
+    extra: [
+      "Nauka własna i rozwój projektowy w obszarze frontendu, AI oraz narzędzi webowych",
+    ],
   },
+
   contact: {
     title: "Profil / Kontakt",
-    text: "Po kliknięciu centralnego rdzenia otwiera się panel z Twoim zdjęciem, danymi kontaktowymi i krótkim opisem profilu.",
+    name: "Dariusz Kuczkowski",
+    role: "Frontend / Fullstack / AI-assisted",
+    location: "Wrocław",
+    email: "tomachawk88@gmail.com",
+    phone: "+48 731 913 497",
+    availability: "Od zaraz",
+    workMode: "Dowolny",
+    summary:
+      "Kandydat z technicznym zapleczem, praktycznym podejściem do rozwiązywania problemów i dużą motywacją do wejścia do branży IT przez frontend oraz projekty własne.",
   },
+
   ai: {
     title: "AI Workflow",
-    text: "Wykorzystuję AI do prototypowania, refaktoru, debugowania i przyspieszania pracy, ale zachowuję kontrolę nad logiką i architekturą rozwiązania.",
+    items: [
+      "Wykorzystuję AI do szybszego prototypowania interfejsów i pomysłów produktowych",
+      "Tworzę grafiki, modele 3D i eksperymentalne assety wspierające projekty webowe",
+      "Używam AI jako wsparcia w nauce, debugowaniu i iteracyjnym rozwijaniu rozwiązań",
+      "Traktuję AI jako narzędzie przyspieszające pracę, a nie zamiennik zrozumienia logiki",
+    ],
   },
+
   goals: {
     title: "Cele",
-    text: "Rozwijać się w nowoczesnym frontendzie, budować efektowne i funkcjonalne interfejsy oraz wykorzystywać AI do szybszego dostarczania jakościowych rozwiązań.",
+    items: [
+      "Rozwijać się w nowoczesnym frontendzie i budować coraz lepsze interfejsy",
+      "Wejść do środowiska, w którym liczy się praktyka, nauka i realny progres",
+      "Łączyć web development z AI, automatyzacją i kreatywnymi projektami technologicznymi",
+      "Budować portfolio projektów, które pokazują nie tylko estetykę, ale też działanie i pomysł",
+    ],
   },
+
   models3d: {
     title: "Modele 3D",
-    text: "Po lewej stronie pojawia się duży podgląd modeli 3D. Możesz przełączać kolejne modele przyciskami Prev / Next.",
+    paragraphs: [
+      "Po lewej stronie pojawia się duży podgląd modeli 3D. Możesz przełączać kolejne modele przyciskami Prev / Next.",
+      "Modele są częścią moich eksperymentów z AI, assetami i prezentacją projektów w przeglądarce.",
+    ],
   },
+
   websites: {
     title: "Strony WWW",
-    text: "Miejsce na realizacje webowe, landing page, dashboardy, interfejsy i inne projekty frontendowe.",
+    paragraphs: [
+      "Tutaj mogę prezentować landing page, dashboardy, interfejsy i inne projekty frontendowe.",
+      "Interesuje mnie tworzenie stron, które nie tylko wyglądają dobrze, ale też mają charakter i wyróżniają się sposobem prezentacji.",
+    ],
   },
+
   automation: {
     title: "AI / Automatyzacje",
-    text: "Miejsce na automatyzacje, pipeline’y AI, narzędzia wspierające pracę i integracje procesów.",
+    paragraphs: [
+      "Miejsce na automatyzacje, pipeline’y AI, narzędzia wspierające pracę i eksperymenty z przyspieszaniem procesów.",
+    ],
   },
+
   ui: {
     title: "UI / Koncepty",
-    text: "Tutaj możesz pokazać futurystyczne interfejsy, koncepty produktów i eksperymenty wizualne.",
+    paragraphs: [
+      "Tutaj mogę pokazać futurystyczne interfejsy, koncepty produktów i wizualne eksperymenty z frontendem.",
+    ],
   },
 } as const;
 
@@ -330,13 +459,209 @@ function BigModelViewer({
   );
 }
 
+function SectionRenderer({ active }: { active: SectionKey }) {
+  const current = sectionContent[active] as any;
+
+  if (active === "contact") {
+    return (
+      <>
+        <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+          Profil główny
+        </div>
+
+        <div className="mt-4 flex items-start gap-4">
+          <div className="h-24 w-24 overflow-hidden rounded-2xl border border-cyan-300/20">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/profile.jpg"
+              alt="Dariusz Kuczkowski"
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <div>
+            <div className="text-2xl font-semibold text-cyan-50">{current.name}</div>
+            <div className="mt-1 text-sm text-cyan-200/70">{current.role}</div>
+          </div>
+        </div>
+
+        <div className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
+          <p>
+            <span className="text-cyan-200">Lokalizacja:</span> {current.location}
+          </p>
+          <p>
+            <span className="text-cyan-200">Email:</span> {current.email}
+          </p>
+          <p>
+            <span className="text-cyan-200">Telefon:</span> {current.phone}
+          </p>
+          <p>
+            <span className="text-cyan-200">Dostępność:</span> {current.availability}
+          </p>
+          <p>
+            <span className="text-cyan-200">Tryb pracy:</span> {current.workMode}
+          </p>
+        </div>
+
+        <p className="mt-5 text-sm leading-6 text-slate-300">{current.summary}</p>
+      </>
+    );
+  }
+
+  if (current.items && Array.isArray(current.items)) {
+    const firstItem = current.items[0];
+
+    if (firstItem?.company) {
+      return (
+        <>
+          <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+            Moduł aktywny
+          </div>
+          <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+
+          <div className="mt-5 space-y-5">
+            {current.items.map((job: any, index: number) => (
+              <div key={index} className="border-b border-cyan-300/10 pb-4 last:border-b-0">
+                <div className="text-base font-semibold text-cyan-100">
+                  {job.company} – {job.role}
+                </div>
+                <div className="mt-1 text-sm text-cyan-300/70">
+                  {job.location} • {job.period}
+                </div>
+                <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-300">
+                  {job.points.map((point: string, i: number) => (
+                    <li key={i}>• {point}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {current.summary && (
+            <p className="mt-4 text-sm leading-6 text-slate-300">{current.summary}</p>
+          )}
+        </>
+      );
+    }
+
+    if (firstItem?.school) {
+      return (
+        <>
+          <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+            Moduł aktywny
+          </div>
+          <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+
+          <div className="mt-5 space-y-4">
+            {current.items.map((edu: any, index: number) => (
+              <div key={index} className="border-b border-cyan-300/10 pb-4 last:border-b-0">
+                <div className="text-base font-semibold text-cyan-100">{edu.school}</div>
+                <div className="mt-1 text-sm leading-6 text-slate-300">{edu.degree}</div>
+                <div className="mt-1 text-sm text-cyan-300/70">
+                  {edu.location} • {edu.period}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {current.extra && (
+            <ul className="mt-4 space-y-1 text-sm leading-6 text-slate-300">
+              {current.extra.map((point: string, i: number) => (
+                <li key={i}>• {point}</li>
+              ))}
+            </ul>
+          )}
+        </>
+      );
+    }
+
+    if (typeof firstItem === "string") {
+      return (
+        <>
+          <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+            Moduł aktywny
+          </div>
+          <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+          <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
+            {current.items.map((item: string, index: number) => (
+              <li key={index}>• {item}</li>
+            ))}
+          </ul>
+        </>
+      );
+    }
+  }
+
+  if (current.groups) {
+    return (
+      <>
+        <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+          Moduł aktywny
+        </div>
+        <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+
+        <div className="mt-5 space-y-5">
+          {current.groups.map((group: any, index: number) => (
+            <div key={index}>
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300/75">
+                {group.label}
+              </div>
+              <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-300">
+                {group.items.map((item: string, i: number) => (
+                  <li key={i}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </>
+    );
+  }
+
+  if (current.paragraphs) {
+    return (
+      <>
+        <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+          Moduł aktywny
+        </div>
+        <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+
+        <div className="mt-4 space-y-4 text-sm leading-6 text-slate-300">
+          {current.paragraphs.map((paragraph: string, index: number) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+
+        {current.highlight && (
+          <div className="mt-5 rounded-2xl border border-cyan-300/15 bg-cyan-300/5 px-4 py-3 text-sm leading-6 text-cyan-100">
+            {current.highlight}
+          </div>
+        )}
+      </>
+    );
+  }
+
+  if (current.text) {
+    return (
+      <>
+        <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
+          Moduł aktywny
+        </div>
+        <div className="mt-4 text-2xl font-semibold text-cyan-50">{current.title}</div>
+        <p className="mt-4 text-sm leading-6 text-slate-300">{current.text}</p>
+      </>
+    );
+  }
+
+  return null;
+}
+
 export default function IronManCvLanding() {
   const [started, setStarted] = useState(false);
   const [active, setActive] = useState<SectionKey>("about");
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [selectedModelIndex, setSelectedModelIndex] = useState(0);
 
-  const current = useMemo(() => sectionContent[active], [active]);
   const selectedModel = modelLibrary[selectedModelIndex];
 
   const handleMainTileClick = (id: SectionKey) => {
@@ -412,9 +737,8 @@ export default function IronManCvLanding() {
               </motion.button>
 
               <p className="mt-8 max-w-md text-center text-sm leading-6 text-slate-300">
-                Kliknij, aby uruchomić futurystyczne CV. Po starcie rdzeń
-                interfejsu się aktywuje, rozsuną się moduły i pojawią się sekcje
-                profilu.
+                Kliknij, aby uruchomić futurystyczne CV. Po starcie rdzeń interfejsu
+                się aktywuje, rozsuną się moduły i pojawią się sekcje profilu.
               </p>
             </motion.div>
           ) : (
@@ -480,68 +804,11 @@ export default function IronManCvLanding() {
 
                 <div className="absolute left-[720px] top-12 flex gap-4">
                   <StatChip label="Tryb" value="Active" />
-                  <StatChip label="Stack" value="React / JS / UI" />
+                  <StatChip label="Stack" value="React / JS / AI" />
                 </div>
 
-                <div className="absolute right-12 top-12 w-[380px] rounded-3xl border border-cyan-400/20 bg-slate-950/60 p-5 shadow-[0_0_40px_rgba(34,211,238,0.14)] backdrop-blur-xl">
-                  {active === "contact" ? (
-                    <>
-                      <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
-                        Profil główny
-                      </div>
-
-                      <div className="mt-4 flex items-start gap-4">
-                        <div className="h-24 w-24 rounded-2xl border border-cyan-300/20 overflow-hidden">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src="/images/profile.jpg"
-                            alt="Darek"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-
-                        <div>
-                          <div className="text-2xl font-semibold text-cyan-50">
-                            Darek K.
-                          </div>
-                          <div className="mt-1 text-sm text-cyan-200/70">
-                            Frontend / Fullstack / AI-assisted
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
-                        <p>
-                          <span className="text-cyan-200">Email:</span>{" "}
-                          twojmail@example.com
-                        </p>
-                        <p>
-                          <span className="text-cyan-200">Telefon:</span> +48 000 000 000
-                        </p>
-                        <p>
-                          <span className="text-cyan-200">Lokalizacja:</span> Polska
-                        </p>
-                      </div>
-
-                      <p className="mt-5 text-sm leading-6 text-slate-300">
-                        Krótki opis o Tobie: techniczne zaplecze, bootcamp fullstack,
-                        własne projekty, szybka nauka i duże nastawienie na praktyczne
-                        dostarczanie rozwiązań.
-                      </p>
-                    </>
-                  ) : (
-                    <>
-                      <div className="text-[11px] uppercase tracking-[0.4em] text-cyan-300/60">
-                        Moduł aktywny
-                      </div>
-                      <div className="mt-4 text-2xl font-semibold text-cyan-50">
-                        {current.title}
-                      </div>
-                      <p className="mt-4 text-sm leading-6 text-slate-300">
-                        {current.text}
-                      </p>
-                    </>
-                  )}
+                <div className="absolute right-12 top-12 max-h-[730px] w-[420px] overflow-y-auto rounded-3xl border border-cyan-400/20 bg-slate-950/60 p-5 shadow-[0_0_40px_rgba(34,211,238,0.14)] backdrop-blur-xl">
+                  <SectionRenderer active={active} />
                 </div>
 
                 <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 gap-4">
@@ -553,8 +820,8 @@ export default function IronManCvLanding() {
                         whileTap={{ scale: 0.68 }}
                         onClick={() => handleMainTileClick(item.id as SectionKey)}
                         className={`rounded-full border px-5 py-3 transition ${active === item.id
-                          ? "border-cyan-200/70 bg-cyan-300/15 text-cyan-50 shadow-[0_0_24px_rgba(34,211,238,0.25)]"
-                          : "border-cyan-400/20 bg-slate-950/60 text-cyan-300/80 hover:border-cyan-300/50 hover:text-cyan-100"
+                            ? "border-cyan-200/70 bg-cyan-300/15 text-cyan-50 shadow-[0_0_24px_rgba(34,211,238,0.25)]"
+                            : "border-cyan-400/20 bg-slate-950/60 text-cyan-300/80 hover:border-cyan-300/50 hover:text-cyan-100"
                           }`}
                       >
                         <div className="flex items-center gap-2 text-sm">
@@ -600,8 +867,8 @@ export default function IronManCvLanding() {
                         }
                         transition={{ duration: 0.25 }}
                         className={`flex h-24 w-24 flex-col items-center justify-center rounded-3xl border backdrop-blur-xl transition ${active === item.id
-                          ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
-                          : "border-cyan-400/20 bg-slate-950/55 shadow-[0_0_20px_rgba(34,211,238,0.12)] hover:border-cyan-300/45"
+                            ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+                            : "border-cyan-400/20 bg-slate-950/55 shadow-[0_0_20px_rgba(34,211,238,0.12)] hover:border-cyan-300/45"
                           }`}
                       >
                         <Icon className="h-7 w-7 text-cyan-200" />
@@ -679,8 +946,8 @@ export default function IronManCvLanding() {
                             whileTap={{ scale: 0.68 }}
                             onClick={() => handleProjectSubClick(item.id as SectionKey)}
                             className={`flex h-24 w-24 flex-col items-center justify-center rounded-3xl border backdrop-blur-xl transition ${active === item.id
-                              ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
-                              : "border-cyan-400/30 bg-slate-950/75 shadow-[0_0_25px_rgba(34,211,238,0.16)] hover:border-cyan-300/55"
+                                ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+                                : "border-cyan-400/30 bg-slate-950/75 shadow-[0_0_25px_rgba(34,211,238,0.16)] hover:border-cyan-300/55"
                               }`}
                           >
                             <Icon className="h-7 w-7 text-cyan-200" />
