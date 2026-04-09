@@ -187,27 +187,29 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                                     </div>
                                 )}
 
-                                {project.live && (
-                                    <a
-                                        href={project.live}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="mt-3 inline-block text-sm text-cyan-300 underline hover:text-cyan-100"
-                                    >
-                                        🔗 Zobacz demo
-                                    </a>
-                                )}
+                                <div className="mt-3 flex flex-wrap items-center gap-4">
+                                    {project.live && (
+                                        <a
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-sm text-cyan-300 underline hover:text-cyan-100"
+                                        >
+                                            🔗 Zobacz demo
+                                        </a>
+                                    )}
 
-                                {project.github && (
-                                    <a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="mt-2 ml-4 inline-block text-sm text-cyan-400 underline hover:text-cyan-200"
-                                    >
-                                        💻 Kod źródłowy
-                                    </a>
-                                )}
+                                    {project.github && (
+                                        <a
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-sm text-cyan-400 underline hover:text-cyan-200"
+                                        >
+                                            💻 Kod źródłowy
+                                        </a>
+                                    )}
+                                </div>
 
                                 {/* OBRAZEK */}
                                 {project.image && (
