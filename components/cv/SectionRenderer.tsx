@@ -1,7 +1,8 @@
 "use client";
 
-import { sectionContent, SectionKey } from "@/data/cvData";
 import {
+    sectionContent,
+    SectionKey,
     ExperienceItem,
     EducationItem,
     ProjectItem,
@@ -10,7 +11,6 @@ import {
 
 export default function SectionRenderer({ active }: { active: SectionKey }) {
     const current = sectionContent[active] as any;
-    if (!current) return null;
 
     if (!current) {
         return (
@@ -47,11 +47,21 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                 </div>
 
                 <div className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
-                    <p><span className="text-cyan-200">Lokalizacja:</span> {current.location}</p>
-                    <p><span className="text-cyan-200">Email:</span> {current.email}</p>
-                    <p><span className="text-cyan-200">Telefon:</span> {current.phone}</p>
-                    <p><span className="text-cyan-200">Dostępność:</span> {current.availability}</p>
-                    <p><span className="text-cyan-200">Tryb pracy:</span> {current.workMode}</p>
+                    <p>
+                        <span className="text-cyan-200">Lokalizacja:</span> {current.location}
+                    </p>
+                    <p>
+                        <span className="text-cyan-200">Email:</span> {current.email}
+                    </p>
+                    <p>
+                        <span className="text-cyan-200">Telefon:</span> {current.phone}
+                    </p>
+                    <p>
+                        <span className="text-cyan-200">Dostępność:</span> {current.availability}
+                    </p>
+                    <p>
+                        <span className="text-cyan-200">Tryb pracy:</span> {current.workMode}
+                    </p>
                 </div>
 
                 <p className="mt-5 text-sm leading-6 text-slate-300">
@@ -78,7 +88,10 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
 
                     <div className="mt-5 space-y-5">
                         {current.items.map((job: ExperienceItem, index: number) => (
-                            <div key={index} className="border-b border-cyan-300/10 pb-4">
+                            <div
+                                key={index}
+                                className="border-b border-cyan-300/10 pb-4 last:border-b-0"
+                            >
                                 <div className="text-base font-semibold text-cyan-100">
                                     {job.company} – {job.role}
                                 </div>
@@ -87,7 +100,7 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                                     {job.location} • {job.period}
                                 </div>
 
-                                <ul className="mt-3 space-y-1 text-sm text-slate-300">
+                                <ul className="mt-3 space-y-1 text-sm leading-6 text-slate-300">
                                     {job.points.map((p: string, i: number) => (
                                         <li key={i}>• {p}</li>
                                     ))}
@@ -95,12 +108,6 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                             </div>
                         ))}
                     </div>
-
-                    {current.summary && (
-                        <p className="mt-4 text-sm text-slate-300">
-                            {current.summary}
-                        </p>
-                    )}
                 </>
             );
         }
@@ -119,12 +126,15 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
 
                     <div className="mt-5 space-y-4">
                         {current.items.map((edu: EducationItem, index: number) => (
-                            <div key={index} className="border-b border-cyan-300/10 pb-4">
+                            <div
+                                key={index}
+                                className="border-b border-cyan-300/10 pb-4 last:border-b-0"
+                            >
                                 <div className="text-base font-semibold text-cyan-100">
                                     {edu.school}
                                 </div>
 
-                                <div className="mt-1 text-sm text-slate-300">
+                                <div className="mt-1 text-sm leading-6 text-slate-300">
                                     {edu.degree}
                                 </div>
 
@@ -134,14 +144,6 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                             </div>
                         ))}
                     </div>
-
-                    {current.extra && (
-                        <ul className="mt-4 text-sm text-slate-300">
-                            {current.extra.map((p: string, i: number) => (
-                                <li key={i}>• {p}</li>
-                            ))}
-                        </ul>
-                    )}
                 </>
             );
         }
@@ -160,35 +162,37 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
 
                     <div className="mt-5 space-y-5">
                         {current.items.map((project: ProjectItem, index: number) => (
-                            <div key={index} className="border-b border-cyan-300/10 pb-4">
+                            <div
+                                key={index}
+                                className="border-b border-cyan-300/10 pb-4 last:border-b-0"
+                            >
                                 <div className="text-base font-semibold text-cyan-100">
                                     {project.name}
                                 </div>
 
-                                <p className="mt-2 text-sm text-slate-300">
+                                <p className="mt-2 text-sm leading-6 text-slate-300">
                                     {project.description}
                                 </p>
 
-                                {/* TECH STACK */}
                                 {project.tech && (
                                     <div className="mt-3 flex flex-wrap gap-2">
-                                        {project.tech.map((t, i) => (
+                                        {project.tech.map((tech, i) => (
                                             <span
                                                 key={i}
                                                 className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-2 py-1 text-xs text-cyan-100"
                                             >
-                                                {t}
+                                                {tech}
                                             </span>
                                         ))}
                                     </div>
                                 )}
 
-                                {/* LIVE LINK */}
                                 {project.live && (
                                     <a
                                         href={project.live}
                                         target="_blank"
-                                        className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-100 underline"
+                                        rel="noreferrer"
+                                        className="mt-3 inline-block text-sm text-cyan-300 underline hover:text-cyan-100"
                                     >
                                         🔗 Zobacz demo
                                     </a>
@@ -212,7 +216,7 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                         {current.title}
                     </div>
 
-                    <ul className="mt-5 text-sm text-slate-300">
+                    <ul className="mt-5 space-y-2 text-sm leading-6 text-slate-300">
                         {current.items.map((item: string, index: number) => (
                             <li key={index}>• {item}</li>
                         ))}
@@ -222,7 +226,7 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
         }
     }
 
-    // GROUPY (skills)
+    // GROUPS
     if (current.groups) {
         return (
             <>
@@ -237,11 +241,11 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                 <div className="mt-5 space-y-5">
                     {current.groups.map((group: SkillGroup, index: number) => (
                         <div key={index}>
-                            <div className="text-sm font-semibold text-cyan-300">
+                            <div className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300/75">
                                 {group.label}
                             </div>
 
-                            <ul className="mt-2 text-sm text-slate-300">
+                            <ul className="mt-2 space-y-1 text-sm leading-6 text-slate-300">
                                 {group.items.map((item: string, i: number) => (
                                     <li key={i}>• {item}</li>
                                 ))}
@@ -253,7 +257,7 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
         );
     }
 
-    // PARAGRAFY
+    // PARAGRAPHS
     if (current.paragraphs) {
         return (
             <>
@@ -265,14 +269,14 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                     {current.title}
                 </div>
 
-                <div className="mt-4 space-y-4 text-sm text-slate-300">
+                <div className="mt-4 space-y-4 text-sm leading-6 text-slate-300">
                     {current.paragraphs.map((p: string, i: number) => (
                         <p key={i}>{p}</p>
                     ))}
                 </div>
 
                 {current.highlight && (
-                    <div className="mt-4 rounded-xl border border-cyan-300/20 p-3 text-sm text-cyan-100">
+                    <div className="mt-5 rounded-2xl border border-cyan-300/15 bg-cyan-300/5 px-4 py-3 text-sm leading-6 text-cyan-100">
                         {current.highlight}
                     </div>
                 )}
