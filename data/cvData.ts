@@ -26,6 +26,7 @@ export type ProjectItem = {
     tech?: string[];
     live?: string;
     github?: string;
+    image?: string;
 };
 
 export type SkillGroup = {
@@ -166,6 +167,7 @@ export const sectionContent = {
                 tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
                 live: "https://helpdesk-app-sepia.vercel.app/",
                 github: "https://github.com/Tomachawk/helpdesk-app",
+                image: "/images/helpdesk.png",
             },
             {
                 name: "Interaktywne CV",

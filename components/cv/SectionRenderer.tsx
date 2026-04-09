@@ -208,6 +208,15 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                                         💻 Kod źródłowy
                                     </a>
                                 )}
+
+                                {/* OBRAZEK */}
+                                {project.image && (
+                                    <img
+                                        src={project.image}
+                                        alt={project.name}
+                                        className="mt-4 rounded-xl border border-cyan-300/20 shadow-lg"
+                                    />
+                                )}
                             </div>
                         ))}
                     </div>
