@@ -25,6 +25,7 @@ export type ProjectItem = {
     description: string;
     tech?: string[];
     live?: string;
+    github?: string;
 };
 
 export type SkillGroup = {
@@ -164,6 +165,7 @@ export const sectionContent = {
                     "System zgłoszeń (ticketów) z podziałem na widok użytkownika i administratora. Obsługa statusów, wyszukiwarka, usuwanie zgłoszeń z potwierdzeniem oraz zapis danych w localStorage.",
                 tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
                 live: "https://helpdesk-app-sepia.vercel.app/",
+                github: "https://github.com/Tomachawk/helpdesk-app",
             },
             {
                 name: "Interaktywne CV",

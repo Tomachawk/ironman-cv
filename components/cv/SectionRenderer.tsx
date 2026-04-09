@@ -197,6 +197,17 @@ export default function SectionRenderer({ active }: { active: SectionKey }) {
                                         🔗 Zobacz demo
                                     </a>
                                 )}
+
+                                {project.github && (
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="mt-2 ml-4 inline-block text-sm text-cyan-400 underline hover:text-cyan-200"
+                                    >
+                                        💻 Kod źródłowy
+                                    </a>
+                                )}
                             </div>
                         ))}
                     </div>
