@@ -186,14 +186,55 @@ export const sectionContent = {
         title: "Doświadczenie",
         items: [
             {
-                company: "MMT IDEA",
-                role: "Elektromonter / Brygadzista",
-                period: "2023–2026",
+                company: "MMT IDEA sp. z o.o. sp. k.",
+                role: "Elektromonter – pełnienie funkcji brygadzisty",
+                period: "12.2024 – 02.2026",
                 location: "Wrocław",
                 points: [
-                    "Usuwanie awarii",
-                    "Obsługa infrastruktury",
-                    "Praca pod presją czasu",
+                    "Obsługa tramwajowych stacji prostownikowych",
+                    "Praca pod presją czasu z zachowaniem wysokiej jakości wykonywanych zadań",
+                    "Przekazywanie istotnych informacji w sposób jasny, konkretny i zrozumiały",
+                    "Monitorowanie realizacji zadań i bieżące raportowanie postępów pracy",
+                    "Samodzielna realizacja zadań zgodnie z wyznaczonymi celami i wymaganiami",
+                    "Skuteczne planowanie czasu oraz ustalanie priorytetów dla codziennych obowiązków",
+                ],
+            },
+            {
+                company: "Ergopak",
+                role: "Operator maszyn CMD",
+                period: "11.2024 – 12.2024",
+                location: "Krępice",
+                points: [
+                    "Obsługa zgrzewarek typu CMD",
+                ],
+            },
+            {
+                company: "MMT IDEA sp. z o.o. sp. k.",
+                role: "Elektromonter – pełnienie funkcji brygadzisty",
+                period: "01.2023 – 10.2024",
+                location: "Wrocław",
+                points: [
+                    "Usuwanie usterek oraz awarii tramwajowej sieci trakcyjnej",
+                    "Przegląd oraz konserwacja tramwajowej sieci trakcyjnej",
+                    "Obsługa oraz utrzymanie zajezdni na terenie miasta",
+                ],
+            },
+            {
+                company: "Wadex",
+                role: "Ślusarz",
+                period: "09.2021 – 12.2022",
+                location: "Wrocław",
+                points: [
+                    "Spawanie oraz montaż systemów kominowych",
+                ],
+            },
+            {
+                company: "Ergopak",
+                role: "Operator wytłaczarek tworzyw sztucznych",
+                period: "09.2014 – 09.2021",
+                location: "Wrocław",
+                points: [
+                    "Obsługa wytłaczarek tworzyw sztucznych w produkcji folii",
                 ],
             },
         ],
