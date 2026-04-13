@@ -9,7 +9,7 @@ import {
     Box,
     Globe,
     Bot,
-    Palette,
+    Gamepad2,
 } from "lucide-react";
 
 export type ExperienceItem = {
@@ -55,7 +55,7 @@ export const projectSubItems = [
     { id: "models3d", label: "Modele 3D", icon: Box, angle: -65, radius: 155 },
     { id: "websites", label: "Strony WWW", icon: Globe, angle: -5, radius: 165 },
     { id: "automation", label: "AI / Automatyzacje", icon: Bot, angle: 55, radius: 160 },
-    { id: "ui", label: "UI / Koncepty", icon: Palette, angle: 120, radius: 150 },
+    { id: "games", label: "Gry", icon: Gamepad2, angle: 120, radius: 150 },
 ] as const;
 
 export const modelLibrary = [
@@ -185,7 +185,7 @@ export const sectionContent = {
     projects: {
         title: "Projekty",
         paragraphs: [
-            "Wybierz kategorię projektu z modułu „Projekty”: Strony WWW, Modele 3D, AI / Automatyzacje lub UI / Koncepty.",
+            "Wybierz kategorię projektu z modułu „Projekty”: Strony WWW, Modele 3D, AI / Automatyzacje lub Gry.",
             "Każda kategoria pokazuje osobne realizacje i eksperymenty."
         ],
     },
@@ -323,10 +323,15 @@ export const sectionContent = {
         ],
     },
 
-    ui: {
-        title: "UI / Koncepty",
-        paragraphs: [
-            "Eksperymenty z interfejsem użytkownika.",
+    games: {
+        title: "Gry",
+        items: [
+            {
+                name: "Space Invaders (w budowie)",
+                description:
+                    "Mini gra inspirowana klasycznym Space Invaders. Projekt będzie rozwijany o sterowanie statkiem, strzelanie, przeciwników i logikę kolizji.",
+                tech: ["Next.js", "React", "TypeScript"],
+            },
         ],
     },
 } as const;
