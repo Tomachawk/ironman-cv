@@ -131,18 +131,43 @@ export const sectionContent = {
         title: "Umiejętności",
         groups: [
             {
-                label: "Web",
+                label: "Frontend",
                 items: [
-                    "HTML, CSS, JavaScript (podstawy)",
-                    "React / Next.js (podstawy)",
+                    "HTML, CSS, JavaScript",
+                    "React / Next.js",
                     "Tworzenie interfejsów użytkownika",
+                    "Responsywność (RWD)",
                 ],
             },
             {
-                label: "AI",
+                label: "Backend",
+                items: [
+                    "Next.js API routes",
+                    "Praca z bazą danych (Prisma)",
+                    "Podstawy REST API",
+                ],
+            },
+            {
+                label: "Baza danych",
+                items: [
+                    "PostgreSQL (Supabase)",
+                    "SQL (podstawy)",
+                    "Operacje CRUD",
+                ],
+            },
+            {
+                label: "Dodatkowe",
+                items: [
+                    "Python (podstawy)",
+                    "Django (podstawy)",
+                    "PHP (podstawy)",
+                ],
+            },
+            {
+                label: "AI / Narzędzia",
                 items: [
                     "ChatGPT – wsparcie developmentu",
-                    "ComfyUI – grafika, eksperymenty 3D",
+                    "ComfyUI – grafika i modele 3D",
                     "Budowanie workflow AI",
                 ],
             },
@@ -150,7 +175,7 @@ export const sectionContent = {
                 label: "Praca",
                 items: [
                     "Samodzielność",
-                    "Praca pod presją",
+                    "Rozwiązywanie problemów",
                     "Organizacja pracy",
                 ],
             },
@@ -159,26 +184,9 @@ export const sectionContent = {
 
     projects: {
         title: "Projekty",
-        items: [
-            {
-                name: "Helpdesk System (Next.js)",
-                description:
-                    "System zgłoszeń (ticketów) z podziałem na widok użytkownika i administratora. Obsługa statusów, wyszukiwarka, usuwanie zgłoszeń z potwierdzeniem oraz zapis danych w localStorage.",
-                tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-                live: "https://helpdesk-app-sepia.vercel.app/",
-                github: "https://github.com/Tomachawk/helpdesk-app",
-                image: "/images/helpdesk.png",
-            },
-            {
-                name: "Interaktywne CV",
-                description:
-                    "Futurystyczne CV w formie aplikacji webowej z animacjami, HUD UI oraz integracją modeli 3D.",
-            },
-            {
-                name: "Modele 3D + AI",
-                description:
-                    "Eksperymenty z generowaniem modeli 3D oraz integracją ich w aplikacjach webowych.",
-            },
+        paragraphs: [
+            "Wybierz kategorię projektu z modułu „Projekty”: Strony WWW, Modele 3D, AI / Automatyzacje lub UI / Koncepty.",
+            "Każda kategoria pokazuje osobne realizacje i eksperymenty."
         ],
     },
 
@@ -245,9 +253,15 @@ export const sectionContent = {
         items: [
             {
                 school: "CodeBrainers",
-                degree: "Fullstack Developer",
+                degree: "Bootcamp Fullstack Developer",
                 period: "2020",
-                location: "Certyfikat",
+                location: "Szkolenie intensywne",
+            },
+            {
+                school: "Zespół Szkół Budowlanych we Wrocławiu",
+                degree: "Technolog robót wykończeniowych w budownictwie",
+                period: "2004–2007",
+                location: "Wrocław",
             },
         ],
     },
@@ -273,14 +287,32 @@ export const sectionContent = {
     models3d: {
         title: "Modele 3D",
         paragraphs: [
-            "Prezentacja modeli 3D w aplikacji webowej.",
+            "Kategoria poświęcona modelom 3D i ich prezentacji w aplikacji webowej.",
+            "Po kliknięciu uruchamia się duży podgląd modeli z możliwością przełączania kolejnych obiektów."
         ],
     },
 
     websites: {
         title: "Strony WWW",
-        paragraphs: [
-            "Projekty stron i interfejsów użytkownika.",
+        items: [
+            {
+                name: "Helpdesk System (Next.js)",
+                description:
+                    "System zgłoszeń z podziałem na widok użytkownika i administratora. Obsługa statusów, wyszukiwarka, usuwanie zgłoszeń z potwierdzeniem oraz zapis danych.",
+                tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
+                live: "https://helpdesk-app-sepia.vercel.app/",
+                github: "https://github.com/Tomachawk/helpdesk-app",
+                image: "/images/helpdesk.png",
+            },
+            {
+                name: "Service Booking Portal",
+                description:
+                    "Full-stack aplikacja do zarządzania rezerwacjami z rolami użytkownika i administratora. Rejestracja, logowanie, tworzenie rezerwacji, panel admina, filtrowanie, sortowanie i statystyki. Projekt pokazuje moje umiejętności pracy z backendem, bazą danych oraz logiką aplikacji.",
+                tech: ["Next.js", "React", "TypeScript", "Prisma", "Supabase", "Tailwind CSS"],
+                live: "https://service-booking-portal.vercel.app/",
+                github: "https://github.com/Tomachawk/service-booking-portal",
+                image: "/images/booking.png",
+            },
         ],
     },
 

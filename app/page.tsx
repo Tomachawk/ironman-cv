@@ -36,16 +36,13 @@ export default function IronManCvLanding() {
   const [active, setActive] = useState<SectionKey>("about");
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [selectedModelIndex, setSelectedModelIndex] = useState(0);
+  const [showModelViewer, setShowModelViewer] = useState(false);
 
   const selectedModel = modelLibrary[selectedModelIndex];
 
   const handleMainTileClick = (id: SectionKey) => {
     if (id === "projects") {
-      setProjectsOpen((prev) => {
-        const next = !prev;
-        if (next) setActive("projects");
-        return next;
-      });
+      setProjectsOpen((prev) => !prev);
       return;
     }
 
@@ -55,6 +52,12 @@ export default function IronManCvLanding() {
 
   const handleProjectSubClick = (id: SectionKey) => {
     setProjectsOpen(false);
+
+    if (id === "models3d") {
+      setShowModelViewer(true);
+      return;
+    }
+
     setActive(id);
   };
 
@@ -125,12 +128,12 @@ export default function IronManCvLanding() {
               className="relative h-[860px] w-full max-w-[1700px]"
             >
               <AnimatePresence>
-                {active === "models3d" && !projectsOpen && (
+                {showModelViewer && (
                   <BigModelViewer
                     model={selectedModel}
                     onPrev={handlePrevModel}
                     onNext={handleNextModel}
-                    onClose={() => setActive("projects")}
+                    onClose={() => setShowModelViewer(false)}
                   />
                 )}
               </AnimatePresence>
@@ -195,8 +198,8 @@ export default function IronManCvLanding() {
                         whileTap={{ scale: 0.68 }}
                         onClick={() => handleMainTileClick(item.id as SectionKey)}
                         className={`rounded-full border px-5 py-3 transition ${active === item.id
-                            ? "border-cyan-200/70 bg-cyan-300/15 text-cyan-50 shadow-[0_0_24px_rgba(34,211,238,0.25)]"
-                            : "border-cyan-400/20 bg-slate-950/60 text-cyan-300/80 hover:border-cyan-300/50 hover:text-cyan-100"
+                          ? "border-cyan-200/70 bg-cyan-300/15 text-cyan-50 shadow-[0_0_24px_rgba(34,211,238,0.25)]"
+                          : "border-cyan-400/20 bg-slate-950/60 text-cyan-300/80 hover:border-cyan-300/50 hover:text-cyan-100"
                           }`}
                       >
                         <div className="flex items-center gap-2 text-sm">
@@ -242,8 +245,8 @@ export default function IronManCvLanding() {
                         }
                         transition={{ duration: 0.25 }}
                         className={`flex h-24 w-24 flex-col items-center justify-center rounded-3xl border backdrop-blur-xl transition ${active === item.id
-                            ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
-                            : "border-cyan-400/20 bg-slate-950/55 shadow-[0_0_20px_rgba(34,211,238,0.12)] hover:border-cyan-300/45"
+                          ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+                          : "border-cyan-400/20 bg-slate-950/55 shadow-[0_0_20px_rgba(34,211,238,0.12)] hover:border-cyan-300/45"
                           }`}
                       >
                         <Icon className="h-7 w-7 text-cyan-200" />
@@ -331,8 +334,8 @@ export default function IronManCvLanding() {
                             whileTap={{ scale: 0.68 }}
                             onClick={() => handleProjectSubClick(item.id as SectionKey)}
                             className={`flex h-24 w-24 flex-col items-center justify-center rounded-3xl border backdrop-blur-xl transition ${active === item.id
-                                ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
-                                : "border-cyan-400/30 bg-slate-950/75 shadow-[0_0_25px_rgba(34,211,238,0.16)] hover:border-cyan-300/55"
+                              ? "border-cyan-100/70 bg-cyan-300/15 shadow-[0_0_30px_rgba(34,211,238,0.35)]"
+                              : "border-cyan-400/30 bg-slate-950/75 shadow-[0_0_25px_rgba(34,211,238,0.16)] hover:border-cyan-300/55"
                               }`}
                           >
                             <Icon className="h-7 w-7 text-cyan-200" />
