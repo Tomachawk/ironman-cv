@@ -327,10 +327,13 @@ export const sectionContent = {
         title: "Gry",
         items: [
             {
-                name: "Space Invaders (w budowie)",
+                name: "Space Invaders (React Game)",
                 description:
-                    "Mini gra inspirowana klasycznym Space Invaders. Projekt będzie rozwijany o sterowanie statkiem, strzelanie, przeciwników i logikę kolizji.",
-                tech: ["Next.js", "React", "TypeScript"],
+                    "Interaktywna gra przeglądarkowa inspirowana klasycznym Space Invaders. Zawiera system strzelania, kolizji, AI przeciwników, score oraz pomiar czasu przejścia.",
+                tech: ["React", "Next.js", "TypeScript"],
+                live: "https://space-invaders-xi-three.vercel.app",
+                github: "https://github.com/Tomachawk/space-invaders",
+                image: "/images/space-invaders.png"
             },
         ],
     },
