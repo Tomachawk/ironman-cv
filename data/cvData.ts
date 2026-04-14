@@ -54,7 +54,6 @@ export const items = [
 export const projectSubItems = [
     { id: "models3d", label: "Modele 3D", icon: Box, angle: -65, radius: 155 },
     { id: "websites", label: "Strony WWW", icon: Globe, angle: -5, radius: 165 },
-    { id: "automation", label: "AI / Automatyzacje", icon: Bot, angle: 55, radius: 160 },
     { id: "games", label: "Gry", icon: Gamepad2, angle: 120, radius: 150 },
 ] as const;
 
