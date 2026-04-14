@@ -316,13 +316,6 @@ export const sectionContent = {
         ],
     },
 
-    automation: {
-        title: "Automatyzacje",
-        paragraphs: [
-            "Workflow AI i automatyzacja procesów.",
-        ],
-    },
-
     games: {
         title: "Gry",
         items: [
