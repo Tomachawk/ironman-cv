@@ -48,13 +48,11 @@ export const items = [
     { id: "experience", label: "Doświadczenie", icon: Briefcase, angle: 70, radius: 210 },
     { id: "education", label: "Edukacja", icon: GraduationCap, angle: 125, radius: 205 },
     { id: "goals", label: "Cele", icon: Rocket, angle: 180, radius: 215 },
-    { id: "ai", label: "AI Workflow", icon: Cpu, angle: 235, radius: 220 },
 ] as const;
 
 export const projectSubItems = [
     { id: "models3d", label: "Modele 3D", icon: Box, angle: -65, radius: 155 },
     { id: "websites", label: "Strony WWW", icon: Globe, angle: -5, radius: 165 },
-    { id: "automation", label: "AI / Automatyzacje", icon: Bot, angle: 55, radius: 160 },
     { id: "games", label: "Gry", icon: Gamepad2, angle: 120, radius: 150 },
 ] as const;
 
